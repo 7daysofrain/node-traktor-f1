@@ -3,19 +3,26 @@
   "version": "0.0.1",
   "description": "A package providing access to the Traktor F1 controller. Supports all inputs and setting any LED.",
   "author": "Andrew Metcalf <met5678@gmail.com>",
-  "main": "./lib/traktor_f1",
+  "main": "dist/index_bundle.js",
+  "scripts": {
+    "build": "webpack",
+    "prepare": "npm run build"
+  },
   "dependencies": {
     "lodash": "^4.5.1",
     "node-hid": "^0.7.0",
     "tinycolor2": "^1.4.1"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "devDependencies": {
+    "@babel/core": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.21.2",
+    "webpack-cli": "^4.5.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://met5678@bitbucket.org/met5678/node-traktor-f1.git"
+    "url": "https://github.com/7daysofrain/node-traktor-f1.git"
   },
   "license": "ISC"
 }
